@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,41 +12,77 @@
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../style.css" rel="stylesheet">
 </head>
-  <body>
+
+<body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Yes! Doctor</a>
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Yes! Doctor</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container-fluid top-margin">
 
-      <div class="row">
-  <div class="col-xs-2 top-margin-1">
-   <span>Date:</span>
-    <input type="date" class="form-control" value="2014-02-09">
-    <div class="list-group top-margin-1">
-  <a href="#" class="list-group-item active">
-    Appointments
-  </a>
-  <a href="#" class="list-group-item">Abc</a>
-  <a href="#" class="list-group-item">Def</a>
-  <a href="#" class="list-group-item">Ghi</a>
-</div>
-  </div>
-  <div class="col-xs-10">
+        <div class="row">
+            <div class="col-xs-2 top-margin-1">
+                <span>Date:</span>
+                <input type="date" class="form-control" value="2014-02-09">
+                <div class="list-group top-margin-1">
+                    <a href="#" class="list-group-item active">
+                    Appointments
+                  </a>
+                    <a href="#" class="list-group-item">Abc</a>
+                    <a href="#" class="list-group-item">Def</a>
+                    <a href="#" class="list-group-item">Ghi</a>
+                </div>
+            </div>
+            <div class="col-xs-10">
+                <h3>Abc Opq</h3>
+                <p>
+                    Age: 20
+                    contact: 1111
+                    address: PPP
+                    email: a@b.com
+                </p>
+                <br/>
+                <table>
+                    <th>
+                        <td>Date</td>
+                        <td>Complaint</td>
+                        <td>Diagnosis</td>
+                        <td>Teatment</td>
+                        <td>Days</td>
+                    </th>
+                    <tr>
+                       <td>12/02/2015</td>
+                        <td>Headach</td>
+                        <td>Acidity</td>
+                        <td>AntiAcid</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                       <td>12/02/2015</td>
+                        <td><input type="text"/></td>
+                        <td><input type="text"/></td>
+                        <td><input type="text"/></td>
+                        <td><input type="text"/></td>
+                    </tr>
+                </table>
+                <button class="btn btn-primary right-margin">Save</button>
+                <a href="index.html">Cancle</a>
+            </div>
+        </div>
 
-  </div>
-</div>
-
-    </div><!-- /.container -->
+    </div>
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -53,4 +91,5 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
