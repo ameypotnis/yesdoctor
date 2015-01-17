@@ -10,3 +10,15 @@
 .right-margin {
     margin-right: 15px
 }
+
+.input-sm {
+    width: 50px;
+}
+
+.input-sm-50 {
+    width: 70px !important;
+}
+
+.tom-margin-50 {
+    margin-top: 40px;
+}

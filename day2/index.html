@@ -44,47 +44,63 @@
                     <a href="#" class="list-group-item">Ghi</a>
                 </div>
             </div>
-            <div class="col-xs-10">
-                <h3>Abc Opq</h3>
-                <p>
-                    Age: 20
-                    contact: 1111
-                    address: PPP
-                    email: a@b.com
-                </p>
-                <br/>
-                <table>
-                    <th>
-                        <td>Date</td>
-                        <td>Complaint</td>
-                        <td>Diagnosis</td>
-                        <td>Teatment</td>
-                        <td>Days</td>
-                    </th>
-                    <tr>
-                       <td>12/02/2015</td>
-                        <td>Headach</td>
-                        <td>Acidity</td>
-                        <td>AntiAcid</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                       <td>12/02/2015</td>
-                        <td><input type="text"/></td>
-                        <td><input type="text"/></td>
-                        <td><input type="text"/></td>
-                        <td><input type="text"/></td>
-                    </tr>
+            <div class="col-xs-10 tom-margin-50">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Abc Pqr</h3>
+                    </div>
+                    <div class="panel-body">
+                        <span>Age: <b>20</b></span>
+                        <span>Weight: <b>69</b></span>
+                    </div>
+                </div>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="complaint" placeholder="Complaint">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Diagnosis" placeholder="Diagnosis">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Treatment" placeholder="Treatment">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm-50" id="days" placeholder="Days">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-sm-50" id="fee" placeholder="Fee">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Complaint</th>
+                            <th>Diagnosis</th>
+                            <th>Treatment</th>
+                            <th>Days</th>
+                            <th>Fees</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">12/09/2014</td>
+                            <td>Headach</td>
+                            <td>Acidity</td>
+                            <td>AntiAcid</td>
+                            <td>2</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <button class="btn btn-primary right-margin">Save</button>
-                <a href="index.html">Cancle</a>
             </div>
         </div>
 
     </div>
     <!-- /.container -->
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
