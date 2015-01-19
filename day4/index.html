@@ -13,7 +13,7 @@
     <link href="../style.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app="yesdoctor">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -31,44 +31,42 @@
 
     <div class="container-fluid top-margin">
 
-        <div class="row">
+        <div class="row" ng-controller="AppCtrl">
             <div class="col-xs-2 top-margin-1">
                 <span>Date:</span>
-                <input type="date" class="form-control" value="2014-02-09">
+                <input type="date" ng-model="date" ng-value=date>
                 <div class="list-group top-margin-1">
                     <a href="#" class="list-group-item active">
                     Appointments
                   </a>
-                    <a href="#" class="list-group-item">Abc</a>
-                    <a href="#" class="list-group-item">Def</a>
-                    <a href="#" class="list-group-item">Ghi</a>
+                    <a ng-repeat="a in appointments" href="#" class="list-group-item" ng-click="getPatient(a.id)">{{a.id}} - {{a.name}}</a>
                 </div>
             </div>
             <div class="col-xs-10 tom-margin-50">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Abc Pqr</h3>
+                        <h3 class="panel-title">{{patient.name}}</h3>
                     </div>
                     <div class="panel-body">
-                        <span>Age: <b>20</b></span>
-                        <span>Weight: <b>69</b></span>
+                        <span>Age: <b>{{patient.age}}</b></span>
+                        <span>Weight: <b>{{patient.weight}}</b></span>
                     </div>
                 </div>
-                <form class="form-inline">
+                <form class="form-inline" ng-submit="addCase()">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="complaint" placeholder="Complaint">
+                        <input type="text" class="form-control" ng-model="newCase.complaint" id="complaint" placeholder="Complaint">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="Diagnosis" placeholder="Diagnosis">
+                        <input type="text" class="form-control" ng-model="newCase.diagnosis" id="Diagnosis" placeholder="Diagnosis">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="Treatment" placeholder="Treatment">
+                        <input type="text" class="form-control" ng-model="newCase.treatment" id="Treatment" placeholder="Treatment">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control input-sm-50" id="days" placeholder="Days">
+                        <input type="text" class="form-control input-sm-50" ng-model="newCase.days" id="days" placeholder="Days">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control input-sm-50" id="fee" placeholder="Fee">
+                        <input type="text" class="form-control input-sm-50" ng-model="newCase.fee" id="fee" placeholder="Fee">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Add</button>
@@ -86,13 +84,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">12/09/2014</td>
-                            <td>Headach</td>
-                            <td>Acidity</td>
-                            <td>AntiAcid</td>
-                            <td>2</td>
-                            <td>100</td>
+                        <tr ng-repeat="case in patient.cases">
+                            <td scope="row">{{case.date}}</td>
+                            <td>{{case.complaint}}</td>
+                            <td>{{case.diagnosis}}</td>
+                            <td>{{case.treatment}}</td>
+                            <td>{{case.days}}</td>
+                            <td>{{case.fee}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -107,6 +105,7 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

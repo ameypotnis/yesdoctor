@@ -1,0 +1,10 @@
+{
+  "name": "Yes!Doctor",
+  "description": "Patient management system",
+  "version": "0.0.1",
+  "node-remote": "<local>",
+  "dependencies": {
+    "express": "3.x",
+    "nedb": "~0.8.0"
+  }
+}
