@@ -2,12 +2,10 @@ var
   express = require("express"),
   path = require("path"),
   nedb = require('nedb'),
-  appointmentDBUrl = "db/appointment.db";
-  patientDBUrl = "db/appointment.db";
+  patientDBUrl = "db/patient.db";
 
 
 var db = {
-  appointment: new nedb({ filename: appointmentDBUrl, autoload: true }),
   patient: new nedb({ filename: patientDBUrl, autoload: true })
 
 };
@@ -23,48 +21,6 @@ app.configure(function () {
 
 app.get('/api', function (req, res) {
   res.send('ok');
-});
-
-app.get('/api/appointment', function (req, res) {
-  db.appointment.find({}, function(err, result) {
-    res.send(result);
-  });
-});
-
-app.post('/api/appointment', function (req, res) {
-  var item = req.body;
-  db.appointment.insert(item, function (err, result) {
-    if (err) {
-      res.send({'error':'An error has occurred'});
-    } else {
-      console.log('Success: ' + JSON.stringify(result));
-      res.send(result);
-    }
-  });
-});
-
-app.put('/api/appointment', function (req, res) {
-  var item = req.body;
-  db.appointment.update({_id : item.id}, item, function (err, result) {
-    if (err) {
-      res.send({'error':'An error has occurred'});
-    } else {
-      console.log('Success: ' + JSON.stringify(result));
-      res.send(result);
-    }
-  });
-});
-
-app.delete('/api/appointment/:id', function (req, res) {
-  var id = req.params.id;
-  db.appointment.remove({_id: id}, {}, function (err, result) {
-    if (err) {
-      res.send({'error':'An error has occurred - ' + err});
-    } else {
-      console.log('' + result + ' document(s) deleted');
-      res.send(req.body);
-    }
-  });
 });
 
 //Patient api
