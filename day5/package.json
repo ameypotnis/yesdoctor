@@ -1,0 +1,19 @@
+{
+  "name": "Yes!Doctor",
+  "description": "Patient management system",
+  "version": "0.0.1",
+  "main": "main.html",
+  "node-remote": "<local>",
+  "dependencies": {
+    "express": "3.x",
+    "nedb": "~0.8.0"
+  },
+  "window": {
+    "title": "Yes Doctor",
+    "toolbar": false,
+    "frame": false,
+    "position": "center",
+    "fullscreen": true,
+    "resizable": true
+  }
+}

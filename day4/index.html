@@ -29,9 +29,28 @@
         </div>
     </nav>
 
-    <div class="container-fluid top-margin">
+    <div class="container-fluid top-margin" ng-controller="AppCtrl">
+        <!-- Add new patient-->
+        <div class="row">
+            <div class="col-xs-12 top-margin-1">
+                <form class="form-inline" ng-submit="addPatient()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newPatient.name" id="patientName" placeholder="Enter patient name">
+                    </div>
+                    <div class="form-group">
+                    <input type="text" class="form-control" ng-model="newPatient.age" id="patientName" placeholder="Enter age">
+                    </div>
+                    <div class="form-group">
+                    <input type="text" class="form-control" ng-model="newPatient.weight" id="patientName" placeholder="Enter weight">
+                    </div>
+                    <button type="submit" class="btn btn-default">Add</button>
+                </form>
+            </div>
+        </div>
 
-        <div class="row" ng-controller="AppCtrl">
+        
+        <!-- appointment section-->
+        <div class="row">
             <div class="col-xs-2 top-margin-1">
                 <span>Date:</span>
                 <input type="date" ng-model="date" ng-value=date>
