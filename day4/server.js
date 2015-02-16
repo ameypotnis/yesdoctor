@@ -27,6 +27,7 @@ app.get('/api/patient', function (req, res) {
 });
 
 app.post('/api/patient', function (req, res) {
+    console.log(req.body);
   var item = req.body;
   db.patient.insert(item, function (err, result) {
     if (err) {
